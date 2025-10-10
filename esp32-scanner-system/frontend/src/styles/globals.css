@@ -1,0 +1,60 @@
+/* src/styles/globals.css */
+
+/* Tailwind directives — make sure tailwind is configured in your project */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme adjustments for dashboard dark + green accent */
+:root {
+  --muted: #9aa4b2;
+  --text: #e6eef6;
+  --accent: #10b981; /* green accent */
+  --card: #0b1220;
+  --card-2: #0f1724;
+  --glass: rgba(255, 255, 255, 0.02);
+}
+
+/* body background override */
+body {
+  @apply bg-[#071023] text-[var(--text)] antialiased;
+}
+
+/* Custom small helpers */
+.header-title {
+  @apply text-lg font-semibold;
+}
+.header-sub {
+  @apply text-sm text-gray-400;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  @apply rounded-xl p-4;
+}
+
+/* Scrollbar (dark) */
+.readings-list::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.readings-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+}
+.readings-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Sticky table header */
+.sticky-header th {
+  @apply sticky top-0 bg-[#06111a] z-10;
+}
+
+/* small text muted */
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

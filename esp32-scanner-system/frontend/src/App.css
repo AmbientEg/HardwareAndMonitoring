@@ -1,0 +1,60 @@
+/* src/styles/App.css - small UI helpers */
+.table-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table thead th {
+  text-align: left;
+  color: var(--muted);
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.table tbody tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+.table td {
+  padding: 10px 12px;
+}
+
+/* device page layout */
+.device-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .device-grid {
+    grid-template-columns: 1fr 360px;
+  }
+}
+
+/* readings list container (scrollable) */
+.readings-list {
+  max-height: 360px;
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.readings-list table {
+  width: 100%;
+}
+.readings-list td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  font-size: 13px;
+}
